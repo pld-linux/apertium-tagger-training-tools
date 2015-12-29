@@ -1,0 +1,15 @@
+--- apertium-tagger-training-tools-1.1.1/configure.ac.orig	2009-02-03 18:34:42.000000000 +0100
++++ apertium-tagger-training-tools-1.1.1/configure.ac	2015-12-29 18:21:43.739110768 +0100
+@@ -125,10 +125,10 @@
+   libxml-2.0 >= required_libxml_version])
+ 
+ PKG_CHECK_MODULES(LTTOOLBOX, [dnl
+-  lttoolbox-3.1 >= required_lttoolbox_version])
++  lttoolbox-3.1 >= required_lttoolbox_version], , [PKG_CHECK_MODULES(LTTOOLBOX, lttoolbox >= required_lttoolbox_version)])
+   
+ PKG_CHECK_MODULES(APERTIUM, [dnl
+-  apertium-3.1 >= required_apertium_version])
++  apertium-3.1 >= required_apertium_version], , [PKG_CHECK_MODULES(APERTIUM, apertium >= required_apertium_version)])
+ 
+ #Check for libraries.
+ AC_CHECK_LIB(xml2, xmlReaderForFile)

@@ -1,0 +1,11 @@
+--- apertium-tagger-training-tools-1.1.1/src/apertium-tagger-tl-trainer.C.orig	2009-02-03 17:40:59.000000000 +0100
++++ apertium-tagger-training-tools-1.1.1/src/apertium-tagger-tl-trainer.C	2015-12-29 18:43:16.182389861 +0100
+@@ -120,7 +120,7 @@ int main(int argc, char *argv[]) {
+ 
+   Utils::debug=false;
+ 
+-  TaggerWord::show_ingnored_string=false;
++  TaggerWord::show_ignored_string=false;
+   TransferRules transfer_rules;
+ 
+   cerr<<"LOCALE: "<<setlocale(LC_ALL,"")<<"\n";
